@@ -4,6 +4,9 @@ description: >
   Escreve mensagens de commit em português do Brasil no padrão Conventional
   Commits, comprimidas à intenção (o porquê, não o quê). Use quando o usuário
   pedir para escrever um commit, uma mensagem de commit ou usar /commit.
+metadata:
+  author: Eduardo Albuquerque - github.com/eac0d3r
+  version: 1.0.0  
 ---
 
 # Commit conciso
