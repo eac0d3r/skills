@@ -10,6 +10,8 @@ description: >
 
 Escreva mensagens de commit curtas e exatas no formato Conventional Commits, em português do Brasil. Sem enrolação. Priorize o porquê em vez do quê: o diff já mostra o quê.
 
+Se nenhum diff ou contexto for fornecido, peça ao usuário o diff ou uma breve descrição da mudança antes de gerar a mensagem.
+
 ## Assunto (primeira linha)
 
 Formato: `<tipo>(<escopo>): <resumo no imperativo>`. O escopo é opcional.
@@ -22,7 +24,7 @@ Formato: `<tipo>(<escopo>): <resumo no imperativo>`. O escopo é opcional.
 
 ## Corpo (somente se necessário)
 
-- Omita quando o assunto for autoexplicativo
+- Omita quando o assunto for autoexplicativo, exceto quando a seção Clareza obrigatória exigir corpo
 - Inclua apenas para: *porquê* não óbvio, breaking changes, notas de migração, issues relacionadas
 - Quebre linhas em 72 caracteres
 - Use marcadores `-`, não `*`
@@ -72,10 +74,10 @@ Mantenha em inglês os elementos que ferramentas e plataformas interpretam: `BRE
 
 ## Clareza obrigatória
 
-Sempre inclua corpo em: breaking changes, correções de segurança, migrações de dados e qualquer commit que reverta outro. Nunca comprima esses casos em apenas o assunto: quem for depurar no futuro precisa do contexto.
+Sempre inclua corpo em: breaking changes, correções de segurança, migrações de dados e qualquer commit que reverta outro, mesmo que o assunto seja autoexplicativo. Esta regra prevalece sobre a omissão de corpo. Nunca comprima esses casos em apenas o assunto: quem for depurar no futuro precisa do contexto.
 
 ## Limites
 
 - Apenas gere a mensagem. Não execute `git commit`, não faça stage de arquivos, não use `--amend`
 - Entregue a mensagem em um bloco de código, pronta para colar
-- Se o usuário disser "parar commit-conciso" ou "modo normal", volte ao estilo de commit detalhado
+- Se o usuário disser "parar commit-conciso" ou "modo normal", volte ao estilo detalhado: mantenha Conventional Commits e português, mas escreva sempre um corpo explicando o quê e o porquê de cada mudança relevante, sem o limite de omissão de corpo.
